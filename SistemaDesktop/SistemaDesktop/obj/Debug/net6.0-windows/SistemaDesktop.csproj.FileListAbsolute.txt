@@ -23,3 +23,4 @@ C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.pdb
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.genruntimeconfig.cache
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\ref\SistemaDesktop.dll
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarContratante.resources

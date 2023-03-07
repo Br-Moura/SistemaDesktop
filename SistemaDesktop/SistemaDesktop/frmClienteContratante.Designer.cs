@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClienteContratante));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtIDContratante = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -78,6 +78,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPesquisar);
             this.groupBox1.Controls.Add(this.txtIDContratante);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -85,6 +86,16 @@
             this.groupBox1.Size = new System.Drawing.Size(551, 60);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(458, 19);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(63, 26);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "...";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtIDContratante
             // 
@@ -118,7 +129,7 @@
             // 
             // btoSair
             // 
-            this.btoSair.Location = new System.Drawing.Point(30, 231);
+            this.btoSair.Location = new System.Drawing.Point(30, 216);
             this.btoSair.Name = "btoSair";
             this.btoSair.Size = new System.Drawing.Size(150, 30);
             this.btoSair.TabIndex = 1;
@@ -128,40 +139,39 @@
             // 
             // btoDeletar
             // 
-            this.btoDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btoDeletar.Image")));
             this.btoDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btoDeletar.Location = new System.Drawing.Point(30, 190);
+            this.btoDeletar.Location = new System.Drawing.Point(30, 94);
             this.btoDeletar.Name = "btoDeletar";
             this.btoDeletar.Size = new System.Drawing.Size(150, 35);
             this.btoDeletar.TabIndex = 0;
-            this.btoDeletar.Text = "Deletar";
+            this.btoDeletar.Text = "Inativar";
             this.btoDeletar.UseVisualStyleBackColor = true;
+            this.btoDeletar.Click += new System.EventHandler(this.btoDeletar_Click);
             // 
             // btoAlterar
             // 
-            this.btoAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btoAlterar.Image")));
             this.btoAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btoAlterar.Location = new System.Drawing.Point(30, 149);
+            this.btoAlterar.Location = new System.Drawing.Point(30, 134);
             this.btoAlterar.Name = "btoAlterar";
             this.btoAlterar.Size = new System.Drawing.Size(150, 35);
             this.btoAlterar.TabIndex = 0;
             this.btoAlterar.Text = "Alterar";
             this.btoAlterar.UseVisualStyleBackColor = true;
+            this.btoAlterar.Click += new System.EventHandler(this.btoAlterar_Click);
             // 
             // btoLimpar
             // 
-            this.btoLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btoLimpar.Image")));
             this.btoLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btoLimpar.Location = new System.Drawing.Point(30, 101);
+            this.btoLimpar.Location = new System.Drawing.Point(30, 175);
             this.btoLimpar.Name = "btoLimpar";
             this.btoLimpar.Size = new System.Drawing.Size(150, 35);
             this.btoLimpar.TabIndex = 0;
             this.btoLimpar.Text = "Limpar";
             this.btoLimpar.UseVisualStyleBackColor = true;
+            this.btoLimpar.Click += new System.EventHandler(this.btoLimpar_Click);
             // 
             // btoAdicionar
             // 
-            this.btoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btoAdicionar.Image")));
             this.btoAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btoAdicionar.Location = new System.Drawing.Point(30, 53);
             this.btoAdicionar.Name = "btoAdicionar";
@@ -566,5 +576,6 @@
         private TextBox txtLogradouro;
         private Label label7;
         private Label label5;
+        private Button btnPesquisar;
     }
 }
