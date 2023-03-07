@@ -125,7 +125,6 @@
             this.groupBox2.Size = new System.Drawing.Size(203, 312);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "butao";
             // 
             // btoSair
             // 
