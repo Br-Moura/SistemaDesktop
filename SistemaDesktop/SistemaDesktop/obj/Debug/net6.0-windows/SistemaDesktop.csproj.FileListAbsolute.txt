@@ -24,3 +24,30 @@ C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.genruntimeconfig.cache
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\ref\SistemaDesktop.dll
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarContratante.resources
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\SistemaDesktop.exe
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\SistemaDesktop.deps.json
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\SistemaDesktop.runtimeconfig.json
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\SistemaDesktop.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\SistemaDesktop.pdb
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.csproj.AssemblyReference.cache
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.Form1.resources
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmClienteContratante.resources
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmLinguagens.resources
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarContratante.resources
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.csproj.GenerateResource.cache
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.AssemblyInfoInputs.cache
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.AssemblyInfo.cs
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.csproj.CoreCompileInputs.cache
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.csproj.CopyComplete
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\refint\SistemaDesktop.dll
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.pdb
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.genruntimeconfig.cache
+C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\ref\SistemaDesktop.dll

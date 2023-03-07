@@ -328,6 +328,7 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
+           
         }
 
         private void btoLimpar_Click(object sender, EventArgs e)

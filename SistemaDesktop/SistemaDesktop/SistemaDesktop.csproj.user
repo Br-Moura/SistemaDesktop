@@ -7,6 +7,9 @@
     <Compile Update="frmClienteContratante.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmLinguagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmPesquisarContratante.cs">
       <SubType>Form</SubType>
     </Compile>
