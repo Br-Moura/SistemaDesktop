@@ -51,3 +51,7 @@ C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDes
 C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.pdb
 C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.genruntimeconfig.cache
 C:\Users\breno\OneDrive - SENAC - SP\Documentos\GitHub\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\ref\SistemaDesktop.dll
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmLinguagens.resources
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmProjeto.resources
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarFreelancerProjeto.resources
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarProjetos.resources

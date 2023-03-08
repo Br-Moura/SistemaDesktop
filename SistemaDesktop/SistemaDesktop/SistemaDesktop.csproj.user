@@ -13,5 +13,14 @@
     <Compile Update="frmPesquisarContratante.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmPesquisarFreelancerProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmPesquisarProjetos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmProjeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
