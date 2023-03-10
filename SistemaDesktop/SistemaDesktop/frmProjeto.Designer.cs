@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(575, 81);
+            this.label1.Location = new System.Drawing.Point(263, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 0;
@@ -90,20 +90,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(592, 22);
+            this.label4.Location = new System.Drawing.Point(380, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 20);
+            this.label4.Size = new System.Drawing.Size(108, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Descrição do Projeto:";
+            this.label4.Text = "Data de Criação:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(150, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 20);
+            this.label5.Size = new System.Drawing.Size(117, 20);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Nome Freelancer";
+            this.label5.Text = "Nome Freelancer:";
             // 
             // label6
             // 
@@ -119,9 +119,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "ID Freelancer";
+            this.label7.Text = "ID Freelancer:";
             // 
             // groupBox1
             // 
@@ -129,7 +129,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(760, 458);
+            this.groupBox1.Size = new System.Drawing.Size(596, 458);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -151,17 +151,18 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(6, 125);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(748, 327);
+            this.groupBox3.Size = new System.Drawing.Size(582, 327);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Descrição Projeto";
             // 
             // maskData
             // 
-            this.maskData.Location = new System.Drawing.Point(626, 45);
+            this.maskData.Location = new System.Drawing.Point(380, 54);
             this.maskData.Mask = "00/00/0000 90:00";
             this.maskData.Name = "maskData";
-            this.maskData.Size = new System.Drawing.Size(106, 26);
+            this.maskData.ReadOnly = true;
+            this.maskData.Size = new System.Drawing.Size(103, 26);
             this.maskData.TabIndex = 7;
             this.maskData.ValidatingType = typeof(System.DateTime);
             // 
@@ -169,7 +170,7 @@
             // 
             this.btnPesquisarProjeto.Location = new System.Drawing.Point(193, 54);
             this.btnPesquisarProjeto.Name = "btnPesquisarProjeto";
-            this.btnPesquisarProjeto.Size = new System.Drawing.Size(60, 25);
+            this.btnPesquisarProjeto.Size = new System.Drawing.Size(60, 28);
             this.btnPesquisarProjeto.TabIndex = 1;
             this.btnPesquisarProjeto.Text = "...";
             this.btnPesquisarProjeto.UseVisualStyleBackColor = true;
@@ -178,6 +179,11 @@
             // cboVersaoProjeto
             // 
             this.cboVersaoProjeto.FormattingEnabled = true;
+            this.cboVersaoProjeto.Items.AddRange(new object[] {
+            "Em andamento",
+            "Finalizado",
+            "Cancelado",
+            "Quebrado"});
             this.cboVersaoProjeto.Location = new System.Drawing.Point(380, 104);
             this.cboVersaoProjeto.Name = "cboVersaoProjeto";
             this.cboVersaoProjeto.Size = new System.Drawing.Size(189, 28);
@@ -186,9 +192,12 @@
             // cboStatusProjeto
             // 
             this.cboStatusProjeto.FormattingEnabled = true;
-            this.cboStatusProjeto.Location = new System.Drawing.Point(575, 104);
+            this.cboStatusProjeto.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.cboStatusProjeto.Location = new System.Drawing.Point(263, 54);
             this.cboStatusProjeto.Name = "cboStatusProjeto";
-            this.cboStatusProjeto.Size = new System.Drawing.Size(121, 28);
+            this.cboStatusProjeto.Size = new System.Drawing.Size(111, 28);
             this.cboStatusProjeto.TabIndex = 4;
             // 
             // label8
@@ -212,7 +221,7 @@
             this.txtOBS.Location = new System.Drawing.Point(6, 158);
             this.txtOBS.Multiline = true;
             this.txtOBS.Name = "txtOBS";
-            this.txtOBS.Size = new System.Drawing.Size(368, 154);
+            this.txtOBS.Size = new System.Drawing.Size(563, 154);
             this.txtOBS.TabIndex = 6;
             // 
             // txtIDProjeto
@@ -231,7 +240,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(748, 100);
+            this.groupBox2.Size = new System.Drawing.Size(582, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Freelancer";
@@ -242,7 +251,7 @@
             this.cboNomeFreelancer.FormattingEnabled = true;
             this.cboNomeFreelancer.Location = new System.Drawing.Point(150, 45);
             this.cboNomeFreelancer.Name = "cboNomeFreelancer";
-            this.cboNomeFreelancer.Size = new System.Drawing.Size(250, 28);
+            this.cboNomeFreelancer.Size = new System.Drawing.Size(224, 28);
             this.cboNomeFreelancer.TabIndex = 2;
             // 
             // cboIDFreelancer
@@ -259,7 +268,7 @@
             this.btnPesquisarFreelancer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnPesquisarFreelancer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPesquisarFreelancer.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarFreelancer.Location = new System.Drawing.Point(592, 64);
+            this.btnPesquisarFreelancer.Location = new System.Drawing.Point(380, 45);
             this.btnPesquisarFreelancer.Name = "btnPesquisarFreelancer";
             this.btnPesquisarFreelancer.Size = new System.Drawing.Size(150, 30);
             this.btnPesquisarFreelancer.TabIndex = 3;
@@ -275,7 +284,7 @@
             this.groupBox4.Controls.Add(this.btnAlterar);
             this.groupBox4.Location = new System.Drawing.Point(12, 476);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(760, 73);
+            this.groupBox4.Size = new System.Drawing.Size(596, 73);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
@@ -283,9 +292,9 @@
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdicionar.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionar.Location = new System.Drawing.Point(130, 25);
+            this.btnAdicionar.Location = new System.Drawing.Point(52, 25);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(150, 30);
+            this.btnAdicionar.Size = new System.Drawing.Size(120, 30);
             this.btnAdicionar.TabIndex = 0;
             this.btnAdicionar.Text = "Adicionar Projeto";
             this.btnAdicionar.UseVisualStyleBackColor = false;
@@ -295,40 +304,43 @@
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(598, 25);
+            this.btnLimpar.Location = new System.Drawing.Point(430, 25);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(150, 30);
+            this.btnLimpar.Size = new System.Drawing.Size(120, 30);
             this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnInativar
             // 
             this.btnInativar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnInativar.ForeColor = System.Drawing.Color.White;
-            this.btnInativar.Location = new System.Drawing.Point(442, 25);
+            this.btnInativar.Location = new System.Drawing.Point(304, 25);
             this.btnInativar.Name = "btnInativar";
-            this.btnInativar.Size = new System.Drawing.Size(150, 30);
+            this.btnInativar.Size = new System.Drawing.Size(120, 30);
             this.btnInativar.TabIndex = 2;
-            this.btnInativar.Text = "Inativar Projeto";
+            this.btnInativar.Text = "Inativar/Ativar";
             this.btnInativar.UseVisualStyleBackColor = false;
+            this.btnInativar.Click += new System.EventHandler(this.btnInativar_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(286, 25);
+            this.btnAlterar.Location = new System.Drawing.Point(178, 25);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(150, 30);
+            this.btnAlterar.Size = new System.Drawing.Size(120, 30);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar Projeto";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // frmProjeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(617, 561);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

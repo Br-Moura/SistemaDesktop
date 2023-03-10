@@ -108,12 +108,30 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
+            InativarAtivar();
         }
-
+        private void InativarAtivar()
+        {
+            if (cbostatus.SelectedIndex == 0)
+            {
+                txtNome.Enabled = true;
+                txtOBS.Enabled = true;
+                btnInativar.Text = "Inativar";
+            }
+            else if (cbostatus.SelectedIndex == 1)
+            {
+                txtNome.Enabled = false;
+                txtOBS.Enabled = false;
+                btnInativar.Text = "Ativar";
+            }
+        }
         private void frmLinguagens_Load(object sender, EventArgs e)
         {
             Testeconexao();
             CarregarGrid();
+            InativarAtivar();
+            btnInativar.Enabled = false;
+            btnAlterar.Enabled = false;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -144,6 +162,7 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
+            InativarAtivar();
             CarregarGrid();
         }
 
@@ -178,41 +197,85 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
+            btnAlterar.Enabled = true;
+            btnInativar.Enabled = true;
+            InativarAtivar();
+
         }
 
         private void btnInativar_Click(object sender, EventArgs e)
         {
-            cbostatus.SelectedIndex = 1;
-            string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
-            SqlConnection conn = new SqlConnection(stringConexao);
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            conn.Open();
-
-            try
+            if (cbostatus.SelectedIndex == 0)
             {
-                int i = cmd.ExecuteNonQuery();
-                if (i == 1)
+                cbostatus.SelectedIndex = 1;
+                string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
+                SqlConnection conn = new SqlConnection(stringConexao);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                conn.Open();
+
+                try
                 {
-                    MessageBox.Show("Linguagem Inativada");
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Linguagem Inativada");
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                
+                btnInativar.Text = "Ativar";
             }
-            finally
+            else if (cbostatus.SelectedIndex == 1)
             {
-                conn.Close();
+                cbostatus.SelectedIndex = 0;
+                string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
+                SqlConnection conn = new SqlConnection(stringConexao);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                conn.Open();
+
+                try
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Linguagem Inativada");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                
+                btnInativar.Text = "Inativar";
             }
+            InativarAtivar();
             CarregarGrid();
+
         }
 
         private void gridPesquisarLinguagem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             _codigoLinguagem = int.Parse(gridPesquisarLinguagem.Rows[e.RowIndex].Cells[0].Value.ToString());
             btnPesquisar.PerformClick();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
         }
     }
 }

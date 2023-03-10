@@ -55,3 +55,4 @@ C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmProjeto.resources
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarFreelancerProjeto.resources
 C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.frmPesquisarProjetos.resources
+C:\Users\breno.smoura\source\repos\SistemaDesktop\SistemaDesktop\SistemaDesktop\obj\Debug\net6.0-windows\SistemaDesktop.MDIParent1.resources

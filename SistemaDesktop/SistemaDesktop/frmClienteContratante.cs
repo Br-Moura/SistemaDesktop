@@ -179,6 +179,7 @@ namespace SistemaDesktop
         private void frmClienteContratante_Load(object sender, EventArgs e)
         {
             TesteConn();
+
         }
 
         private void btoDeletar_Click(object sender, EventArgs e)
@@ -213,12 +214,12 @@ namespace SistemaDesktop
             if (cboStatus.SelectedIndex == 0)
             {
                 groupBox3.Enabled = true;
-                groupBox4.Enabled = true;
+                
             }
             else if (cboStatus.SelectedIndex == 1)
             {
                 groupBox3.Enabled = false;
-                groupBox4.Enabled = false;
+                
             }
 
         }
@@ -278,12 +279,12 @@ namespace SistemaDesktop
                 if (cboStatus.SelectedIndex == 0)
                 {
                     groupBox3.Enabled = true;
-                    groupBox4.Enabled = true;
+                    
                 }
                 else if (cboStatus.SelectedIndex == 1)
                 {
                     groupBox3.Enabled = false;
-                    groupBox4.Enabled = false;
+                    
                 }
             }
         }
