@@ -63,6 +63,7 @@ namespace SistemaDesktop
                 cboStatusProjeto.Enabled = true;
                 btnAdicionar.Enabled = true;
                 btnAlterar.Enabled = true;
+                btnInativar.Enabled=true;
                 btnInativar.Text = "Inativar";
             }
             else if (cboStatusProjeto.SelectedIndex == 1)
@@ -73,6 +74,7 @@ namespace SistemaDesktop
                 cboStatusProjeto.Enabled = false;
                 btnAdicionar.Enabled = false;
                 btnAlterar.Enabled = false;
+                btnInativar.Enabled = true;
                 btnInativar.Text = "Ativar";
             }
         }
@@ -114,6 +116,7 @@ namespace SistemaDesktop
                 if (leitura.Read())
                 {
                     MessageBox.Show("Projeto criado com sucesso");
+                    txtIDProjeto.Text = leitura[0].ToString();
 
                 }
             }
@@ -126,7 +129,7 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
-            
+            btnPesquisarProjeto.PerformClick();
         }
 
         private void btnPesquisarProjeto_Click(object sender, EventArgs e)
@@ -221,75 +224,90 @@ namespace SistemaDesktop
             {
                 conn.Close();
             }
+            btnPesquisarProjeto.PerformClick();
         }
 
         private void btnInativar_Click(object sender, EventArgs e)
         {
             if (cboStatusProjeto.SelectedIndex == 0)
             {
-                cboStatusProjeto.SelectedIndex = 1;
-
-                string sql = "update Projeto set status_projeto = '" + cboStatusProjeto.Text + "' where id_projeto = " + txtIDProjeto.Text;
-
-                SqlConnection conn = new SqlConnection(stringConexao);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-
-                try
+                DialogResult result = MessageBox.Show("Você deseja inativar esse Projeto?", "Inativação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i == 1)
+                    cboStatusProjeto.SelectedIndex = 1;
+
+                    string sql = "update Projeto set status_projeto = '" + cboStatusProjeto.Text + "' where id_projeto = " + txtIDProjeto.Text;
+
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
                     {
-                        MessageBox.Show("Projeto Inativado");
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Projeto Inativado");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
                     }
                 }
-                catch (Exception ex)
+                else if (result == DialogResult.No)
                 {
-
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Projeto não foi inativado");
                 }
-                finally
-                {
-                    conn.Close();
-                }
-                InativarAtivar();
-
                 btnInativar.Text = "Ativar";
-
-                
             }
             else if(cboStatusProjeto.SelectedIndex == 1)
             {
-                cboStatusProjeto.SelectedIndex = 0;
-
-                string sql = "update Projeto set status_projeto = '" + cboStatusProjeto.Text + "' where id_projeto = " + txtIDProjeto.Text;
-
-                SqlConnection conn = new SqlConnection(stringConexao);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-
-                try
+                DialogResult result = MessageBox.Show("Você deseja ativar esse Projeto?", "Inativação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i == 1)
+                    cboStatusProjeto.SelectedIndex = 0;
+
+                    string sql = "update Projeto set status_projeto = '" + cboStatusProjeto.Text + "' where id_projeto = " + txtIDProjeto.Text;
+
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
                     {
-                        MessageBox.Show("Projeto Ativado");
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Projeto Ativado");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
                     }
                 }
-                catch (Exception ex)
+                else if (result == DialogResult.No)
                 {
-
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Projeto não foi ativado");
                 }
-                finally
-                {
-                    conn.Close();
-                }
-                InativarAtivar();
+                
                 btnInativar.Text = "Inativar";
             }
+            InativarAtivar();
+            btnPesquisarProjeto.PerformClick();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -302,8 +320,17 @@ namespace SistemaDesktop
             cboVersaoProjeto.SelectedIndex = -1;
             cboStatusProjeto.SelectedIndex = -1;
             txtOBS.Text = "";
-            btnInativar.Enabled = false;
-            btnAlterar.Enabled = false;
+            if (cboStatusProjeto.SelectedIndex == -1)
+            {
+                txtNomeProjeto.Enabled = true;
+                cboVersaoProjeto.Enabled = true;
+                txtOBS.Enabled = true;
+                cboStatusProjeto.Enabled = true;
+                btnAdicionar.Enabled = true;
+                btnInativar.Enabled = false;
+                btnAlterar.Enabled = false;
+            }
         }
+
     }
 }

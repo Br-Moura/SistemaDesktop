@@ -75,6 +75,12 @@ namespace SistemaDesktop
             txtNome.Text = "";
             txtOBS.Text = "";
             cbostatus.SelectedIndex = -1;
+            if (cbostatus.SelectedIndex == -1)
+            {
+                txtNome.Enabled = true;
+                txtOBS.Enabled = true;
+                btnInativar.Text = "Inativar/Ativar";
+            }
 
         }
 
@@ -207,61 +213,79 @@ namespace SistemaDesktop
         {
             if (cbostatus.SelectedIndex == 0)
             {
-                cbostatus.SelectedIndex = 1;
-                string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
-                SqlConnection conn = new SqlConnection(stringConexao);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
+                DialogResult result = MessageBox.Show("Você deseja inativar essa linguagem?", "Inativação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                try
+                if (result == DialogResult.Yes)
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i == 1)
+                    cbostatus.SelectedIndex = 1;
+                    string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
                     {
-                        MessageBox.Show("Linguagem Inativada");
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Linguagem Inativada");
+                        }
                     }
-                }
-                catch (Exception ex)
-                {
+                    catch (Exception ex)
+                    {
 
-                    MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
+                    btnInativar.Text = "Ativar";
                 }
-                finally
+                else if (result == DialogResult.No)
                 {
-                    conn.Close();
+                    MessageBox.Show("Linguagem não inativada");
                 }
-                
-                btnInativar.Text = "Ativar";
             }
             else if (cbostatus.SelectedIndex == 1)
             {
-                cbostatus.SelectedIndex = 0;
-                string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
-                SqlConnection conn = new SqlConnection(stringConexao);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
+                DialogResult result = MessageBox.Show("Você deseja ativar essa linguagem?", "Inativação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                try
+                if (result == DialogResult.Yes)
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i == 1)
+                    cbostatus.SelectedIndex = 0;
+                    string sql = "update Linguagem set status_linguagem = '" + cbostatus.Text + "' where id_linguagem = " + txtID.Text;
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
                     {
-                        MessageBox.Show("Linguagem Inativada");
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Linguagem Ativada");
+                        }
                     }
-                }
-                catch (Exception ex)
-                {
+                    catch (Exception ex)
+                    {
 
-                    MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
+                    btnInativar.Text = "Inativar";
                 }
-                finally
+                else if (result == DialogResult.No)
                 {
-                    conn.Close();
+                    MessageBox.Show("Linguagem não aitivada");
                 }
-                
-                btnInativar.Text = "Inativar";
             }
             InativarAtivar();
             CarregarGrid();

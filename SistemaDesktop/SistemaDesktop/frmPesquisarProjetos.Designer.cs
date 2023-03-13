@@ -61,6 +61,7 @@
             this.Controls.Add(this.gridPesquisarProjeto);
             this.Controls.Add(this.txtPesquisar);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPesquisarProjetos";
             this.Text = "frmPesquisarProjetos";

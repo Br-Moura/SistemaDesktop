@@ -145,7 +145,7 @@
             this.btoDeletar.Name = "btoDeletar";
             this.btoDeletar.Size = new System.Drawing.Size(120, 30);
             this.btoDeletar.TabIndex = 1;
-            this.btoDeletar.Text = "&Inativar";
+            this.btoDeletar.Text = "&Inativar/Ativar";
             this.btoDeletar.UseVisualStyleBackColor = false;
             this.btoDeletar.Click += new System.EventHandler(this.btoDeletar_Click);
             // 
@@ -517,7 +517,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmClienteContratante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

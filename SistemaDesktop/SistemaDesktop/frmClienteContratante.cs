@@ -47,7 +47,7 @@ namespace SistemaDesktop
                 MessageBox.Show("Isira sua senha");
                 return false;
             }
-            if(txtSenha.Text == txtConfirmarSenha.Text)
+            if(txtSenha.Text != txtConfirmarSenha.Text)
             {
                 MessageBox.Show("Confirme sua senha");
                 return false;
@@ -179,49 +179,113 @@ namespace SistemaDesktop
         private void frmClienteContratante_Load(object sender, EventArgs e)
         {
             TesteConn();
+            btoAlterar.Enabled = false;
+            btoDeletar.Enabled = false;
+
 
         }
 
         private void btoDeletar_Click(object sender, EventArgs e)
         {
 
-                cboStatus.SelectedIndex = 1;
-
-            string sql = "update Contratante set status_contratante = '" + cboStatus.Text + "' where id_contratante = " + txtIDContratante.Text ;
-
-            SqlConnection conn = new SqlConnection (stringConexao);
-            SqlCommand cmd = new SqlCommand (sql, conn);
-            cmd.CommandType = CommandType.Text;
-            conn.Open();
-
-            try
+            if (cboStatus.SelectedIndex == 0)
             {
-                int i = cmd.ExecuteNonQuery();
-                if (i == 1)
+                DialogResult result = MessageBox.Show("Você deseja inativar esse contratante?", "Inativação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Contratante Inativado");
+
+                    cboStatus.SelectedIndex = 1;
+
+                    string sql = "update Contratante set status_contratante = '" + cboStatus.Text + "' where id_contratante = " + txtIDContratante.Text;
+
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
+                    {
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Contratante Inativado");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                    btoDeletar.Text = "Ativar";
+
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Contratante não Inativado");
+
+                }
+
+            }
+            
+            else if (cboStatus.SelectedIndex == 1)
+            {
+                DialogResult result = MessageBox.Show("Você deseja Ativar esse contratante?", "Ativaçção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    cboStatus.SelectedIndex = 0;
+
+                    string sql = "update Contratante set status_contratante = '" + cboStatus.Text + "' where id_contratante = " + txtIDContratante.Text;
+
+                    SqlConnection conn = new SqlConnection(stringConexao);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+
+                    try
+                    {
+                        int i = cmd.ExecuteNonQuery();
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Contratante Inativado");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                    btoDeletar.Text = "Inativar";
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Contratante não ativado");
                 }
             }
-            catch (Exception ex)
-            {
 
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
             if (cboStatus.SelectedIndex == 0)
             {
                 groupBox3.Enabled = true;
-                
+                btoAlterar.Enabled = true;
+                btoDeletar.Text = "Inativar";
+                btoAdicionar.Enabled = true;
+
             }
             else if (cboStatus.SelectedIndex == 1)
             {
                 groupBox3.Enabled = false;
-                
+                btoAlterar.Enabled = false;
+                btoDeletar.Text = "Ativar";
+                btoAdicionar.Enabled = false;
             }
-
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -279,12 +343,17 @@ namespace SistemaDesktop
                 if (cboStatus.SelectedIndex == 0)
                 {
                     groupBox3.Enabled = true;
-                    
+                    btoAlterar.Enabled = true;
+                    btoDeletar.Text = "Inativar";
+                    btoAdicionar.Enabled = true;
+
                 }
                 else if (cboStatus.SelectedIndex == 1)
                 {
                     groupBox3.Enabled = false;
-                    
+                    btoAlterar.Enabled = false;
+                    btoDeletar.Text = "Ativar";
+                    btoAdicionar.Enabled = false ;
                 }
             }
         }
@@ -351,6 +420,14 @@ namespace SistemaDesktop
             maskTelefone1.Text = "";
             maskTelefone2.Text = "";
 
+
+            if (cboStatus.SelectedIndex == -1)
+            {
+                groupBox3.Enabled = true;
+                btoAlterar.Enabled = true;
+                btoDeletar.Text = "Inativar/Ativar";
+                btoAdicionar.Enabled = true;
+            }
         }
     }
 }

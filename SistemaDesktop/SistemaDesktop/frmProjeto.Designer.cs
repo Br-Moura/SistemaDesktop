@@ -162,7 +162,7 @@
             this.maskData.Mask = "00/00/0000 90:00";
             this.maskData.Name = "maskData";
             this.maskData.ReadOnly = true;
-            this.maskData.Size = new System.Drawing.Size(103, 26);
+            this.maskData.Size = new System.Drawing.Size(108, 26);
             this.maskData.TabIndex = 7;
             this.maskData.ValidatingType = typeof(System.DateTime);
             // 
@@ -344,9 +344,11 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmProjeto";
-            this.Text = "frmProjeto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Projeto";
             this.Load += new System.EventHandler(this.frmProjeto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
